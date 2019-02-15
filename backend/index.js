@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 
 const employer = require('./routes/employer.route'); // Imports routes for the products
+const worker = require('./routes/worker.route')
 const app = express();
 
 
@@ -17,6 +18,8 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use('/', employer);
+app.use('/worker', worker);
+
 
 let port = 8080;
 
