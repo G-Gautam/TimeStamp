@@ -19,6 +19,13 @@ exports.employer_create = function (req, res) {
     })
 };
 
+exports.employer_getAll = function(req, res){
+    Employer.find({}, function(err, result){
+        if(err) return next(err);
+        res.send(result);
+    })
+}
+
 exports.employer_update = function (req, res) {
     Employer.findOneAndUpdate({"fname": req.params.id}, {$set: {"lname": req.body.lname, "payRate": req.body.payRate, "totalHours": req.body.totalHours }}, function(err){
         if (err) return next(err);

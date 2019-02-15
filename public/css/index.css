@@ -1,0 +1,91 @@
+#sidebar{
+    height: 100vh;
+    background-color: rgb(73, 110, 211);
+    text-align: center;
+}
+#view{
+    height: 100%;
+}
+
+#companyTitle{
+    text-align: center;
+    font-family: "Open Sans", sans-serif;
+    font-size: 3vh;
+    color: white;
+}
+
+#lineSideBar{
+    margin-top: 4vh;
+    height: 0.1vh;
+    border: solid;
+    border-width: 0.06vh;
+    border-color: white;
+}
+
+#loginText{
+    margin-top: 3vh;
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    font-size: 2vh;
+    color: white;
+}
+
+.inputSideBar{
+    margin-top: 1vh;
+    border-radius: 1vh;
+    text-align: center;
+    width: 90%;
+}
+
+#loginButton{
+    margin-top: 1.5vh;
+    background-color: white;
+    width: 50%;
+    font-family: "Roboto", sans-serif;
+    border-radius: 1vh;
+}
+
+#adminControls{
+    visibility: hidden;
+    background-color: rgba(13, 243, 212, 0.39)
+}
+
+#dashboardText{
+    color: white;
+    font-weight: bold;
+    font-family: "Roboto", sans-serif;
+    font-size: 2vh;
+    padding-top: 3vh;
+}
+
+#dashboardSubtitle{
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-size: 1.5vh;
+    margin-top: 2vh;
+}
+
+#addEmpButton, #genReportButton, #findEmployee{
+    margin-top: 1.5vh;
+    background-color: white;
+    width: 80%;
+    border-radius: 1vh;
+}
+
+#genReportButton{
+    margin-bottom: 2vh;
+    text-align: center
+}
+
+#allEmployees, #selectedEmployee, #shifts{
+    margin-top: 2vh;
+}
+#allEmployees #top{
+    background-color: rgb(9, 255, 112);   
+}
+#selectedEmployee #top{
+    background-color: rgba(255, 47, 47, 0.822)
+}
+#shifts #top{
+    background-color: rgb(248, 232, 0)
+}

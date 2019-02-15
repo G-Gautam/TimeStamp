@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html land=en>
+
+<head>
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="https://npmcdn.com/flickity@2/dist/flickity.css">
+    <link href="https://fonts.googleapis.com/css?family=Francois+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://npmcdn.com/flickity@2/dist/flickity.pkgd.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:800" rel="stylesheet">
+    <script src="/js/index.js"></script>
+
+
+
+    <title>Time Stamp</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Works on all devices regardless of screen size and resolution -->
+</head>
+
+<body>
+    <div class=col-sm-2 id=sidebar>
+        <h1 id=companyTitle>
+            Dr.Kannan Dental Clinic
+        </h1>
+        <div class=container-fluid id=lineSideBar>
+            <!--Line-->
+        </div>
+        <h4 id=loginText>Employer Login</h4>
+        <input type=text class=inputSideBar id=usernameInput placeholder="Enter Username">
+        <input type=password class=inputSideBar id=passwordInput placeholder="Enter Password">
+        <button id=loginButton onclick=checkAndLogin()>Login</button>
+        <div class=container-fluid id=lineSideBar>
+            <!--Line-->
+        </div>
+        <div id=adminControls>
+            <h4 id=dashboardText>Admin Dashboard</h4>
+            <h4 id=dashboardSubtitle>Add An Employee</h4>
+            <input type=text class=inputSideBar id=employeeFName placeHolder="First Name">
+            <input type=text class=inputSideBar id=employeeLName placeHolder="Last Name">
+            <input type=text class=inputSideBar id=payRate placeHolder="Pay Rate">
+            <button id=addEmpButton onclick=addEmployee()>Add Employee</button>
+            <div class=container-fluid id=lineSideBar>
+                <!--Line-->
+            </div>
+            <h4 id=dashboardSubtitle>Get Employee Details</h4>
+            <input type=text class=inputSideBar id=empFNameFind placeHolder="First Name">
+            <input type=text class=inputSideBar id=empLNameFind placeHolder="Last Name">
+            <button id=findEmployee onclick=findEmployee()>Find Employee</button>
+            <div class=container-fluid id=lineSideBar>
+                <!--Line-->
+            </div>
+            <h4 id=dashboardSubtitle>Generate An Excel File</h4>
+            <button id=genReportButton onclick=genReport()>Generate Payroll</button>
+
+        </div>
+    </div>
+
+    <div class=col-sm-10 id=view>
+        <div class = col-sm-6 id = adminTable>
+            <!--This will have two tables - A list of all employees, and the selected employee table from admin dashboard-->
+            <table class="table" id = allEmployees>
+                    <thead>
+                      <tr>
+                        <th scope="col" id = top>#</th>
+                        <th scope="col" id = top>First</th>
+                        <th scope="col" id = top>Last</th>
+                        <th scope="col" id = top>Start</th>
+                        <th scope="col" id = top>End</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                  </table>
+                  <table class="table" id = selectedEmployee>
+                        <thead>
+                          <tr>
+                            <th scope="col" id = top>#</th>
+                            <th scope="col" id = top>First</th>
+                            <th scope="col" id = top>Last</th>
+                            <th scope="col" id = top>Start</th>
+                            <th scope="col" id = top>End</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                      </table>
+        </div>
+        <div class = col-sm-6 id = shiftTable>
+            <!--When employee clicks their name, all their shifts are visible for the month or so-->
+            <table class="table" id = shifts>
+                    <thead>
+                      <tr>
+                        <th scope="col" id = top>#</th>
+                        <th scope="col" id = top>First</th>
+                        <th scope="col" id = top>Last</th>
+                        <th scope="col" id = top>Start</th>
+                        <th scope="col" id = top>End</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                  </table>
+        </div>
+
+    </div>
+</body>

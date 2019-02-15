@@ -18,8 +18,11 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use('/', employer);
-app.use('/worker', worker);
+app.use('/html', express.static(__dirname + '/public/html'));
+app.use('/css', express.static(__dirname + '/public/css'));
+app.use('/js', express.static(__dirname + '/public/js'));
 
+app.use('/worker', worker);
 
 let port = 8080;
 
