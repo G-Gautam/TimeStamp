@@ -2,9 +2,11 @@
     height: 100vh;
     background-color: rgb(73, 110, 211);
     text-align: center;
+    max-height: 100vh;
 }
 #view{
     height: 100%;
+    max-height: 100vh;
 }
 
 #companyTitle{
@@ -77,15 +79,28 @@
     text-align: center
 }
 
-#allEmployees, #selectedEmployee, #shifts{
-    margin-top: 2vh;
-}
 #allEmployees #top{
-    background-color: rgb(9, 255, 112);   
+    background-color: rgb(9, 255, 112);  
+}
+
+#allEmployeeRow:hover{
+    background-color: rgb(182, 182, 182);
 }
 #selectedEmployee #top{
     background-color: rgba(255, 47, 47, 0.822)
 }
 #shifts #top{
     background-color: rgb(248, 232, 0)
+}
+
+#viewLabelContainer{
+    background-color: rgb(218, 224, 255);
+    text-align: center;
+    margin-top: 2vh;
+}
+#viewHeading{
+    font-size: 1.5vh;
+    font-family: 'Francois', sans-serif;
+    font-weight: bold;
+    color: rgb(21, 75, 223);
 }
